@@ -1,0 +1,240 @@
+body {
+    margin: 0;
+}
+
+.ax-container {
+    margin: auto;
+
+    width: calc(100% - 32px);
+    max-width: 85%;
+    box-sizing: border-box;
+}
+
+.ax-page-header {
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+}
+
+.ax-page-header__text {
+    font-size: 2rem;
+}
+
+.ax-page-main {
+    box-sizing: border-box;
+    background-color: #f8fafc;
+}
+
+.ax-page-main__navbar {
+    position: sticky;
+    top: 0;
+
+    width: 100%;
+    height: 3rem;
+    box-sizing: border-box;
+
+    background-color: #fff;
+
+    z-index: 1000;
+
+    transition: all .2s;
+}
+
+.ax-page-main__navbar.navbar-mode-2 {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+}
+
+.ax-navbar {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+    max-width: 80rem;
+
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ax-navbar__left,
+.ax-navbar__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ax-navbar-item {
+    display: inline-flex;
+    position: relative;
+
+    height: 100%;
+    align-items: center;
+    color: #6b7280;
+
+    transition: all .2s;
+}
+
+.ax-navbar-item:hover {
+    background-color: #fafafa;
+}
+
+.ax-navbar-item.logo {
+    margin-right: .5rem;
+}
+
+.ax-navbar-item__link {
+    display: inline-flex;
+    align-items: center;
+    padding: .5rem 1.5rem;
+
+    color: #8b92a0;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    text-decoration: none;
+}
+
+.ax-navbar-item__link::before {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+
+    background-color: #f0f0f0;
+
+    transition: all .2s;
+}
+
+.ax-navbar-item__link i {
+    font-size: 1.125rem;
+    margin-right: .5rem;
+}
+
+.ax-navbar-item.logo .ax-navbar-item__link {
+    color: #212223 !important;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.ax-navbar-item .ax-navbar-item__link.ax-navbar-item__link-active {
+    color: #212223;
+}
+
+.ax-navbar-item .ax-navbar-item__link.ax-navbar-item__link-active::before {
+    background-color: #41bdf2;
+}
+
+.ax-menu-bar {
+    display: none;
+}
+
+.ax-menu-bar a {
+    font-size: 1.125rem;
+}
+
+.ax-menu-bar .ax-navbar-dropdown-container {
+    position: absolute;
+    top: 3.875rem;
+    right: .5rem;
+    background-color: #ffffff;
+    
+    border-radius: 2px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-5px);
+    box-shadow: 0 0 8px rgba(0, 0, 0, .15);
+
+    transition: all .2s cubic-bezier(.4, 0, .2, 1);
+}
+
+.ax-menu-bar:hover .ax-navbar-dropdown-container {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    max-height: 150px;
+    display: block;
+}
+
+.ax-navbar-dropdown-container .ax-navbar-dropdown__item {
+    display: block;
+    padding: .625rem 1.25rem;
+    min-width: 6rem;
+    font-size: 1rem;
+    color: #6b7280;
+    transition: all .15s cubic-bezier(.4, 0, .2, 1);
+}
+
+.ax-navbar-dropdown-container .ax-navbar-dropdown__item:hover {
+    background-color: #f0f2f3;
+    color: #212223;
+}
+
+.ax-navbar-dropdown__item:not(:last-child) {
+    border-bottom: 1px solid #ebeef5;
+}
+
+.ax-page-main__body {
+    min-height: calc(100vh - 3rem);
+}
+
+.ax-page-main__footer {
+    padding: 24px 0;
+    background-color: #fff;
+    
+    color: #8b92a0;
+}
+
+.ax-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.ax-column-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+}
+
+.ax-column-right {
+    display: flex;
+    flex-direction: column;
+    width: 18rem;
+    gap: 1rem;
+}
+
+.ax-card {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+    transition: .2s cubic-bezier(.4, 0, .2, 1);
+}
+
+.ax-card:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
+}
+
+.ax-card .ax-card-body {
+    padding: 1.5rem;
+}
+
+.ax-card .ax-card-body__header {
+    font-size: 1.25rem;
+}
+
+.ax-card .ax-card-body__content {
+    padding: .5rem 0;
+
+    font-size: 1rem;
+    color: #8b92a0;
+}
+
+.ax-header-2 {
+    font-size: 1.125rem;
+}

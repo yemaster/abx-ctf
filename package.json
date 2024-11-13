@@ -1,0 +1,11 @@
+{
+  "name": "abxctf",
+  "version": "0.0.1",
+  "description": "A CTF Platform",
+  "main": "src/server.ts",
+  "author": "yemaster",
+  "license": "MIT",
+  "dependencies": {
+    "@vicons/ionicons5": "^0.12.0"
+  }
+}
