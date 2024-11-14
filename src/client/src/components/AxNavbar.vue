@@ -61,7 +61,7 @@ onBeforeUnmount(() => {
                 <div class="ax-navbar__right">
                     <div class="ax-navbar-item">
                         <router-link class="ax-navbar-item__link" to="/login">
-                            <n-icon><PersonOutline /></n-icon>用户
+                            <n-icon><PersonOutline /></n-icon> 登录 / 注册
                         </router-link>
                     </div>
                     <div class="ax-navbar-item ax-menu-bar">

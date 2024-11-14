@@ -10,7 +10,6 @@ const year = new Date().getFullYear();
 </script>
 
 <template>
-	<!--Header-->
 	<div class="ax-page-header">
 		<div class="ax-container">
 			<div class="ax-page-header__text">Abstrax CTF</div>
@@ -19,7 +18,7 @@ const year = new Date().getFullYear();
 	<div class="ax-page-main">
 		<ax-navbar />
 		<div class="ax-page-main__body">
-			<div class="ax-container" style="padding: 48px 0">
+			<div class="ax-container" style="padding: 2.25rem 0">
 				<router-view />
 			</div>
 		</div>
