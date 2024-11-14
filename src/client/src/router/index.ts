@@ -14,6 +14,12 @@ const router = createRouter({
             name: 'problem-list',
             component: () => import('@/pages/problem/ListPage.vue'),
         },
+        // Contest
+        {
+            path: '/contests',
+            name: 'contest-list',
+            component: () => import('@/pages/contest/ListPage.vue'),
+        },
 
         {
             path: '/:pathMatch(.*)*', 

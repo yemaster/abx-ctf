@@ -23,7 +23,7 @@ body {
 
 .ax-page-main {
     box-sizing: border-box;
-    background-color: #f8fafc;
+    background-color: #f0f2f5;
 }
 
 .ax-page-main__navbar {
@@ -225,7 +225,7 @@ body {
     box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
 }
 
-.ax-card .ax-card-body {
+.ax-card-body {
     padding: 1.5rem;
 }
 
@@ -233,12 +233,12 @@ body {
     padding: 1rem 1.5rem;
 }
 
-.ax-card .ax-card-body__header {
+.ax-card-body__header {
     font-size: 1.25rem;
 }
 
-.ax-card .ax-card-body__content {
-    padding: .5rem 0;
+.ax-card-body__content {
+    padding-top: .5rem;
 
     font-size: 1rem;
     line-height: 1rem;
