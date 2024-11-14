@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
+
+const loading = ref(false)
 
 onMounted(() => {
     document.title = `竞赛 - Abstrax CTF`
@@ -19,7 +21,20 @@ onMounted(() => {
     </div>
     <div class="ax-height-1"></div>
     <div class="ax-contest-list">
-        <div class="ax-contest-card" v-for="i in 10">
+        <div class="ax-contest-card" v-if="loading" v-for="i in 5">
+            <div class="ax-contest-image">
+                <n-skeleton height="100%" />
+            </div>
+            <div class="ax-card-body" style="width: 100%">
+                <div class="ax-card-body__header">
+                    <n-skeleton height="1.5rem" width="50%" />
+                </div>
+                <div class="ax-card-body__content">
+                    <n-skeleton height="1rem" width="80%" />
+                </div>
+            </div>
+        </div>
+        <div class="ax-contest-card" v-else v-for="i in 5">
             <div class="ax-contest-image">
                 <img src="https://ctf.u5tc.cn/assets/ef3ee80c56ae6b1e36a73dda2292bf3780bab8d446ffddbd37a35994e1795caa/poster">
             </div>

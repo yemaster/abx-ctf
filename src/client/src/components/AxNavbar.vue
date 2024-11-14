@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, onBeforeUnmount } from 'vue'
+import { onMounted, onBeforeUnmount, ref } from 'vue'
 
 import {
 	HomeOutline,
@@ -13,7 +13,7 @@ import {
 const navbarEle = ref();
 const navbarMode = ref(0);
 
-function onScroll(e) {
+function onScroll() {
     if (navbarEle.value.getBoundingClientRect().top) {
         navbarMode.value = 0;
     }
@@ -23,12 +23,12 @@ function onScroll(e) {
 }
 
 onMounted(() => {
-    document.addEventListener("scroll", onScroll);
-    onScroll();
+    document.addEventListener("scroll", onScroll)
+    onScroll()
 })
 
 onBeforeUnmount(() => {
-    document.removeEventListener("scroll", onScroll);
+    document.removeEventListener("scroll", onScroll)
 })
 </script>
 
