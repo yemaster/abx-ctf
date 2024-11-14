@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
+
 const router = createRouter({
     linkExactActiveClass: 'ax-navbar-item__link-active',
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,11 +25,20 @@ const router = createRouter({
         },
 
         {
-            path: '/:pathMatch(.*)*', 
+            path: '/:pathMatch(.*)*',
             name: 'not-found',
             component: () => import('@/pages/NotFoundPage.vue'),
         },
     ],
+})
+
+router.beforeEach((to, from, next) => {
+    NProgress.start()
+    next()
+})
+
+router.afterEach(() => {
+    NProgress.done()
 })
 
 export default router
