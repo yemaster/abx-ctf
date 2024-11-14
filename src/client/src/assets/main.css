@@ -1,3 +1,7 @@
+:root {
+    
+}
+
 body {
     margin: 0;
 }
@@ -208,7 +212,7 @@ body {
 .ax-column-right {
     display: flex;
     flex-direction: column;
-    width: 18rem;
+    width: 16rem;
     gap: 1rem;
 }
 
@@ -243,6 +247,10 @@ body {
     font-size: 1rem;
     line-height: 1rem;
     color: #8b92a0;
+}
+
+.ax-card-body__meta {
+    padding: 5px 0;
 }
 
 .ax-header-2 {
