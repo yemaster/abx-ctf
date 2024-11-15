@@ -5,7 +5,7 @@ const loading = ref(false)
 
 onMounted(() => {
     document.title = `题库 - Abstrax CTF`
-})
+});
 </script>
 
 <template>
