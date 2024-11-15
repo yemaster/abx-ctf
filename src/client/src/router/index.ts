@@ -12,6 +12,7 @@ const router = createRouter({
             name: 'home',
             component: () => import('@/pages/HomePage.vue'),
         },
+        // Problem List
         {
             path: '/problems',
             name: 'problem-list',
@@ -22,6 +23,11 @@ const router = createRouter({
             path: '/contests',
             name: 'contest-list',
             component: () => import('@/pages/contest/ListPage.vue'),
+        },
+        {
+            path: '/contest/:id',
+            name: 'contest-detail',
+            component: () => import('@/pages/contest/DetailPage.vue'),
         },
 
         {

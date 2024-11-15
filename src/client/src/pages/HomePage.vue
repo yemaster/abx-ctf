@@ -134,6 +134,6 @@ onMounted(async () => {
 .ax-contest-box__image img {
     width: 100%;
     height: 8rem;
-    overflow: hidden;
+    object-fit: cover;
 }
 </style>
