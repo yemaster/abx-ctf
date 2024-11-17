@@ -1,4 +1,8 @@
 {
+    "database": {
+        "development": "postgresql://user:password@localhost:5432/development_db?schema=public",
+        "production": "postgresql://user:password@prod-db-host:5432/production_db?schema=public"
+    },
     "site": {
         "title": "Abx CTF"
     }

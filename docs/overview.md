@@ -16,11 +16,15 @@
 ### 公告新闻 News
 
 - Keys
-  **id**: Number
-  **creator**: User
-  **title**: String
-  **content**: String
-  **date**: Datetime
+  **Id**: Number
+  **Creator**: User
+  **Title**: String
+  **Summary**: String
+  **Content**: String
+  **Date**: Datetime
+
+  **IsPinned**: Boolean
+  **Tags**: String[]
 
 ### 题目信息 Problem
 
