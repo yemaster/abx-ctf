@@ -10,7 +10,7 @@ interface ProblemTab {
 }
 
 const props = defineProps<{
-    problemTypes: ProblemTab[];
+    problemTypes?: ProblemTab[];
 }>();
 
 const defaultProblemTabs: ProblemTab[] = [
