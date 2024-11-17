@@ -1,5 +1,11 @@
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref } from 'vue';
+import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+
+const route = useRoute()
+const router = useRouter()
+
+const contestId = route.params.id
 
 const countdownSetter = ref<number | null>(null)
 // const contestCountdown = ref(0)
@@ -30,6 +36,10 @@ function timeFormatter(time: number) {
     const seconds = pad(time % 60, 2, '0')
 
     return `${hours}:${minutes}:${seconds}`
+}
+
+function enterContest() {
+    router.push(`/contest/${contestId}/challenges`)
 }
 
 onMounted(() => {
@@ -90,7 +100,7 @@ onBeforeUnmount(() => {
                     <n-flex>
                         <n-button>报名比赛</n-button>
                         <n-button type="primary">查看榜单</n-button>
-                        <n-button type="error">进入比赛</n-button>
+                        <n-button type="error" @click="enterContest">进入比赛</n-button>
                     </n-flex>
                 </div>
             </div>

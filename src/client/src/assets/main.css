@@ -109,6 +109,7 @@ b, strong {
     font-size: 1rem;
     line-height: 1.25rem;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .ax-navbar-item__link::before {
@@ -143,6 +144,74 @@ b, strong {
 
 .ax-navbar-item .ax-navbar-item__link.ax-navbar-item__link-active::before {
     background-color: #41bdf2;
+}
+
+.ax-navbar-item.purple .ax-navbar-item__link.ax-navbar-item__link-active {
+    color: #6435c9;
+}
+
+.ax-navbar-item.purple .ax-navbar-item__link.violet.ax-navbar-item__link-active::before {
+    background-color: #6435c9;
+}
+
+.ax-navbar-item.green .ax-navbar-item__link.ax-navbar-item__link-active {
+    color: #00b74a;
+}
+
+.ax-navbar-item.green .ax-navbar-item__link.ax-navbar-item__link-active::before {
+    background-color: #00b74a;
+}
+
+.ax-navbar-item.orange .ax-navbar-item__link.ax-navbar-item__link-active {
+    color: #f76707;
+}
+
+.ax-navbar-item.orange .ax-navbar-item__link.ax-navbar-item__link-active::before {
+    background-color: #f76707;
+}
+
+.ax-navbar-item.red .ax-navbar-item__link.ax-navbar-item__link-active {
+    color: #dc3545;
+}
+
+.ax-navbar-item.red .ax-navbar-item__link.ax-navbar-item__link-active::before {
+    background-color: #dc3545;
+}
+
+.ax-navbar-item.blue .ax-navbar-item__link.ax-navbar-item__link-active {
+    color: #007bff;
+}
+
+.ax-navbar-item.blue .ax-navbar-item__link.ax-navbar-item__link-active::before {
+    background-color: #007bff;
+}
+
+.ax-navbar-item.teal .ax-navbar-item__link.ax-navbar-item__link-active {
+    color: #20c997;
+}
+
+.ax-navbar-item.teal .ax-navbar-item__link.ax-navbar-item__link-active::before {
+    background-color: #20c997;
+}
+
+.ax-navbar-item.yellow .ax-navbar-item__link.ax-navbar-item__link-active {
+    color: #ffc107;
+}
+
+.ax-navbar-item.yellow .ax-navbar-item__link.ax-navbar-item__link-active::before {
+    background-color: #ffc107;
+}
+
+.ax-navbar-item.pink .ax-navbar-item__link.ax-navbar-item__link-active {
+    color: #e83e8c;
+}
+
+.ax-navbar-item.pink .ax-navbar-item__link.ax-navbar-item__link-active::before {
+    background-color: #e83e8c;
+}
+
+.ax-navbar-item.black .ax-navbar-item__link.ax-navbar-item__link-active::before {
+    background-color: #212223;
 }
 
 .ax-menu-bar {
@@ -213,12 +282,13 @@ b, strong {
     display: flex;
     flex-direction: row;
     gap: 1.5rem;
+
+    width: 100%;
 }
 
 .ax-column-left {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 0%;
+    flex: 1 1 auto;
+    min-width: 0;
 }
 
 .ax-column-right {
