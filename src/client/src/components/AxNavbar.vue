@@ -10,6 +10,14 @@ import {
 	MenuOutline,
 } from '@vicons/ionicons5'
 
+import LoginModal from '@/components/LoginModal.vue'
+
+const showLoginModal = ref(false)
+
+function showLogin() {
+    showLoginModal.value = true
+}
+
 const navbarEle = ref();
 const navbarMode = ref(0);
 
@@ -60,9 +68,9 @@ onBeforeUnmount(() => {
                 </div>
                 <div class="ax-navbar__right">
                     <div class="ax-navbar-item">
-                        <router-link class="ax-navbar-item__link" to="/login">
+                        <div class="ax-navbar-item__link" @click="showLogin">
                             <n-icon><PersonOutline /></n-icon> 登录 / 注册
-                        </router-link>
+                        </div>
                     </div>
                     <div class="ax-navbar-item ax-menu-bar">
                         <a class="ax-navbar-item__link" href="javascript:;">
@@ -78,4 +86,5 @@ onBeforeUnmount(() => {
             </div>
 		</div>
 	</div>
+    <LoginModal v-model="showLoginModal" />
 </template>
