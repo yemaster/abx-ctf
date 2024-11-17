@@ -8,7 +8,6 @@ fastify.get('/', async function handler(request, reply) {
     return { hello: 'world' }
 })
 
-// Run the server!
 try {
     await fastify.listen({ port: 3000 })
 } catch (err) {
