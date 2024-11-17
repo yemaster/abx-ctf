@@ -34,7 +34,7 @@ onMounted(() => {
                 </div>
             </div>
         </div>
-        <router-link class="ax-contest-card" to="/contest/1/preview" v-else v-for="i in 5">
+        <router-link class="ax-contest-card" to="/contest/1" v-else v-for="i in 5">
             <div class="ax-contest-image">
                 <img
                     src="https://ctf.u5tc.cn/assets/ef3ee80c56ae6b1e36a73dda2292bf3780bab8d446ffddbd37a35994e1795caa/poster">

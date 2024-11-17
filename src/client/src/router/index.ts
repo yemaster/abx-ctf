@@ -25,23 +25,21 @@ const router = createRouter({
             component: () => import('@/pages/contest/ListPage.vue'),
         },
         {
-            path: '/contest/:id/preview',
+            path: '/contest/:id',
             name: 'contest-detail',
             component: () => import('@/pages/contest/DetailPage.vue'),
         },
         {
-            path: '/contest/:id',
-            name: 'contest-inside',
-            component: () => import('@/pages/contest/InsidePage.vue'),
-            children: [
-                {
-                    path: 'challenges',
-                    name: 'challenge-list',
-                    component: () => import('@/pages/contest/ChallengeListPage.vue'),
-                }
-            ]
+            path: '/contest/:id/challenges',
+            name: 'contest-challenge-list',
+            component: () => import('@/pages/contest/ChallengeListPage.vue')
         },
-
+        // User
+        {
+            path: '/rankings',
+            name: 'ranking-list',
+            component: () => import('@/pages/user/RankPage.vue'),
+        },
         {
             path: '/:pathMatch(.*)*',
             name: 'not-found',

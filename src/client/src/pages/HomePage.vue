@@ -24,7 +24,7 @@ onMounted(async () => {
             <div class="ax-header-2">
                 近期比赛
             </div>
-            <router-link class="ax-contest-box" to="/contest/1/preview">
+            <router-link class="ax-contest-box" to="/contest/1">
                 <div class="ax-contest-box__image">
                     <img
                         src="https://ctf.u5tc.cn/assets/ef3ee80c56ae6b1e36a73dda2292bf3780bab8d446ffddbd37a35994e1795caa/poster">
@@ -50,7 +50,7 @@ onMounted(async () => {
                     </div>
                 </div>
             </router-link>
-            <router-link class="ax-contest-box" to="/contest/1/preview">
+            <router-link class="ax-contest-box" to="/contest/1">
                 <div class="ax-contest-box__image">
                     <img
                         src="https://ctf.u5tc.cn/assets/ef3ee80c56ae6b1e36a73dda2292bf3780bab8d446ffddbd37a35994e1795caa/poster">
@@ -76,7 +76,7 @@ onMounted(async () => {
                     </div>
                 </div>
             </router-link>
-            <router-link class="ax-contest-box" to="/contest/1/preview">
+            <router-link class="ax-contest-box" to="/contest/1">
                 <div class="ax-contest-box__image">
                     <img
                         src="https://ctf.u5tc.cn/assets/ef3ee80c56ae6b1e36a73dda2292bf3780bab8d446ffddbd37a35994e1795caa/poster">

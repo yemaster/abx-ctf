@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted, onBeforeUnmount, ref } from 'vue';
+import { RouterView } from 'vue-router'
 import {
     AppsOutline
 } from '@vicons/ionicons5';
@@ -37,40 +38,79 @@ function showProblem(id: number) {
 </script>
 
 <template>
-    <div class="ax-card">
-        <div class="ax-card-small-body">
-            <div class="ax-card-body__header">
-                筛选
-            </div>
-            <div class="ax-card-body__content">
-                233
+    <div class="ax-row">
+        <div class="ax-column-right" style="width: 20rem">
+            <!--div class="ax-card">
+                <n-list hoverable clickable>
+                    <n-list-item>
+                        题目
+                    </n-list-item>
+                    <n-list-item>
+                        排行
+                    </n-list-item>
+                    <n-list-item>
+                        管理
+                    </n-list-item>
+                </n-list>
+            </div-->
+            <div class="ax-card">
+                <div class="ax-card-small-body">
+                    <n-tabs type="line" size="small" animated>
+                        <n-tab-pane name="all" tab="全部">
+                            66666
+                        </n-tab-pane>
+                        <n-tab-pane name="notifications" tab="通知">
+                            ababab
+                        </n-tab-pane>
+                        <n-tab-pane name="status" tab="动态">
+                            七aaa
+                        </n-tab-pane>
+                        <n-tab-pane name="problems" tab="提醒">
+                            七aaa
+                        </n-tab-pane>
+                    </n-tabs>
+                </div>
             </div>
         </div>
-        <problem-type-tab v-model="nowTab" :problem-types="problemTabs" />
+        <div class="ax-column-left">
+
+            <div class="ax-card">
+                <div class="ax-card-small-body">
+                    <div class="ax-card-body__header">
+                        筛选
+                    </div>
+                    <div class="ax-card-body__content">
+                        233
+                    </div>
+                </div>
+                <problem-type-tab v-model="nowTab" :problem-types="problemTabs" />
+            </div>
+            <div class="ax-height-1"></div>
+            <div class="ax-problem-list">
+                <div class="ax-card" v-if="loading" v-for="i in 5">
+                    <div class="ax-card-body">
+                        <div class="ax-card-body__header">
+                            <n-skeleton height="1.5rem" width="100%" />
+                        </div>
+                        <div class="ax-card-body__content">
+                            <n-skeleton height="1rem" width="80%" />
+                        </div>
+                    </div>
+                </div>
+                <div class="ax-card" v-else v-for="i in 5" @click="showProblem(i)">
+                    <div class="ax-card-body">
+                        <div class="ax-card-body__header">
+                            阿巴阿巴
+                        </div>
+                        <div class="ax-card-body__content">
+                            题目描述题目描述题目描述
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="ax-height-1"></div>
-    <div class="ax-problem-list">
-        <div class="ax-card" v-if="loading" v-for="i in 5">
-            <div class="ax-card-body">
-                <div class="ax-card-body__header">
-                    <n-skeleton height="1.5rem" width="100%" />
-                </div>
-                <div class="ax-card-body__content">
-                    <n-skeleton height="1rem" width="80%" />
-                </div>
-            </div>
-        </div>
-        <div class="ax-card" v-else v-for="i in 5" @click="showProblem(i)">
-            <div class="ax-card-body">
-                <div class="ax-card-body__header">
-                    阿巴阿巴
-                </div>
-                <div class="ax-card-body__content">
-                    题目描述题目描述题目描述
-                </div>
-            </div>
-        </div>
-    </div>
+
     <n-modal v-model:show="showProblemModal">
         <n-card style="width: 30rem" :title="showProblemInfo.title" :bordered="false" size="medium" role="dialog"
             aria-modal="true">
