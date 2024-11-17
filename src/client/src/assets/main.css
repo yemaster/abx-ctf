@@ -348,6 +348,8 @@ b, strong {
 
 .ax-problem-list .ax-card {
     width: calc(33.33% - 1rem);
+
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {

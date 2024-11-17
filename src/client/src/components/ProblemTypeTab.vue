@@ -14,11 +14,11 @@ const props = defineProps<{
 }>();
 
 const defaultProblemTabs: ProblemTab[] = [
-  {
-    name: 'all',
-    tab: '全部',
-    color: 'blue',
-  },
+    {
+        name: 'all',
+        tab: '全部',
+        color: 'blue',
+    },
 ];
 
 const problemTabs = props.problemTypes ?? defaultProblemTabs;
