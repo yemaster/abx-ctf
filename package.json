@@ -1,25 +1,66 @@
 {
-  "name": "abxctf",
-  "version": "0.0.1",
-  "description": "A CTF Platform",
-  "main": "src/server.ts",
-  "author": "yemaster",
-  "license": "MIT",
-  "type": "module",
-  "scripts": {
-    "start": "ts-node src/server.ts"
-  },
-  "dependencies": {
-    "@prisma/client": "5.22.0",
-    "fastify": "5.1.0"
-  },
-  "devDependencies": {
-    "@types/node": "22.9.0",
-    "prisma": "5.22.0",
-    "ts-node": "10.9.2",
-    "typescript": "5.6.3"
-  },
-  "prisma": {
-    "seed": "ts-node prisma/seed.ts"
-  }
+    "name": "abxctf",
+    "version": "0.0.1",
+    "description": "A CTF Platform",
+    "main": "src/server.ts",
+    "author": "yemaster",
+    "license": "MIT",
+    "type": "module",
+    "scripts": {
+        "lint": "xo",
+        "dev": "tsx watch src/server.ts",
+        "migrate": "drizzle-kit generate:pg"
+    },
+    "dependencies": {
+        "@fastify/cors": "^10.0.1",
+        "cli-color": "^2.0.4",
+        "drizzle-orm": "^0.36.3",
+        "fastify": "5.1.0",
+        "pg": "^8.13.1",
+        "redis": "^4.7.0",
+        "tsc": "^2.0.4",
+        "zod": "^3.23.8"
+    },
+    "devDependencies": {
+        "@types/cli-color": "^2.0.6",
+        "@types/node": "22.9.0",
+        "@types/pg": "^8.11.10",
+        "dotenv": "^16.4.5",
+        "drizzle-kit": "^0.28.1",
+        "ts-node": "10.9.2",
+        "tsc-alias": "^1.8.10",
+        "tsx": "^4.19.2",
+        "typescript": "5.6.3",
+        "xo": "^0.59.3"
+    },
+    "xo": {
+        "rules": {
+            "import/extensions": "off",
+            "@typescript-eslint/quotes": [
+                "error",
+                "double"
+            ],
+            "@typescript-eslint/indent": [
+                "error",
+                4
+            ],
+            "@typescript-eslint/object-curly-spacing": [
+                "error",
+                "always"
+            ],
+            "n/prefer-global/process": "off",
+            "@typescript-eslint/no-extraneous-class": "off",
+            "arrow-parens": [
+                "error",
+                "always"
+            ],
+            "@typescript-eslint/no-floating-promises": "off"
+        },
+        "files": [
+            "src/**/*.ts"
+        ],
+        "ignores": [
+            "src/client/**/*"
+        ]
+    }
 }

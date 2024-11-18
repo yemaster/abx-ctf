@@ -1,9 +1,10 @@
 {
     "database": {
-        "development": "postgresql://user:password@localhost:5432/development_db?schema=public",
-        "production": "postgresql://user:password@prod-db-host:5432/production_db?schema=public"
+        "postgres": "postgres://postgres:vlab@127.0.0.1:5432/abxctf_dev",
+        "redis": "redis://localhost: 6379"
     },
-    "site": {
-        "title": "Abx CTF"
+    "server": {
+        "host": "localhost",
+        "port": 8080
     }
 }

@@ -1,16 +1,48 @@
-import Fastify from 'fastify'
-const fastify = Fastify({
-    logger: true
-})
+/**
+ * @project Abstrax CTF Backend
+ * @file src/server.ts
+ * @description Server entry point
+ * @author yemaster
+ */
+import fastify from "fastify";
+import { initDb } from "@api/db";
+import { env, Logger, Redis } from "@api/utils";
 
-// Declare a route
-fastify.get('/', async function handler(request, reply) {
-    return { hello: 'world' }
-})
 
-try {
-    await fastify.listen({ port: 3000 })
-} catch (err) {
-    fastify.log.error(err)
-    process.exit(1)
-}
+//const API_VERSION = "v1";
+
+export const main = async () => {
+    const app = fastify({
+        logger: true,
+        trustProxy: true,
+    });
+
+    await initDb();
+    await Redis.initialize();
+
+    app.get("/", async () => ({
+        app: {
+            name: "abxctf",
+            version: {
+                core: "0.0.1",
+                ui: "0.0.1",
+            },
+        },
+    }));
+
+    app.listen({
+        host: env.HOST,
+        port: env.PORT
+    }, (error, address) => {
+        if (error) {
+            Logger.error("INIT", error.message);
+            throw new Error(error.message);
+        }
+
+        Logger.info("INIT", `Server listening on ${address}`);
+    });
+
+    return app;
+};
+
+main();
